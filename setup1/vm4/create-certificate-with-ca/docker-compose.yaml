@@ -20,3 +20,10 @@ services:
     container_name: ca_orderer
     networks:
       - test
+    extra_hosts:   
+      - peer0.org1.example.com:18.237.217.153
+      - peer1.org1.example.com:18.237.217.153
+      - peer0.org2.example.com:52.40.56.0
+      - peer1.org2.example.com:52.40.56.0
+      - peer0.org3.example.com:34.215.196.120
+      - peer1.org3.example.com:34.215.196.120  

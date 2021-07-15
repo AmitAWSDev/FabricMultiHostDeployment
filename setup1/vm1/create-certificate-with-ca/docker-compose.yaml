@@ -21,3 +21,7 @@ services:
     hostname: ca.org1.example.com
     networks:
       - test
+    extra_hosts:   
+      - orderer.example.com:54.245.37.201
+      - orderer2.example.com:54.245.37.201
+      - orderer3.example.com:54.245.37.201
