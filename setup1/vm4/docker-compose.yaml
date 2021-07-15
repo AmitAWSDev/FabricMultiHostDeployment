@@ -38,7 +38,14 @@ services:
       - ../../artifacts/channel/genesis.block:/var/hyperledger/orderer/genesis.block
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/var/hyperledger/orderer/msp
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls:/var/hyperledger/orderer/tls
-  
+    extra_hosts:   
+      - peer0.org1.example.com:18.237.217.153
+      - peer1.org1.example.com:18.237.217.153
+      - peer0.org2.example.com:52.40.56.0
+      - peer1.org2.example.com:52.40.56.0
+      - peer0.org3.example.com:34.215.196.120
+      - peer1.org3.example.com:34.215.196.120
+
   orderer2.example.com:
     container_name: orderer2.example.com
     image: hyperledger/fabric-orderer:2.1
@@ -73,7 +80,13 @@ services:
       - ../../artifacts/channel/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/msp:/var/hyperledger/orderer/msp
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls:/var/hyperledger/orderer/tls
-
+    extra_hosts:   
+      - peer0.org1.example.com:18.237.217.153
+      - peer1.org1.example.com:18.237.217.153
+      - peer0.org2.example.com:52.40.56.0
+      - peer1.org2.example.com:52.40.56.0
+      - peer0.org3.example.com:34.215.196.120
+      - peer1.org3.example.com:34.215.196.120
 
   orderer3.example.com:
     container_name: orderer3.example.com
@@ -109,3 +122,11 @@ services:
       - ../../artifacts/channel/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/msp:/var/hyperledger/orderer/msp
       - ./crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls:/var/hyperledger/orderer/tls
+    extra_hosts:   
+      - peer0.org1.example.com:18.237.217.153
+      - peer1.org1.example.com:18.237.217.153
+      - peer0.org2.example.com:52.40.56.0
+      - peer1.org2.example.com:52.40.56.0
+      - peer0.org3.example.com:34.215.196.120
+      - peer1.org3.example.com:34.215.196.120
+      

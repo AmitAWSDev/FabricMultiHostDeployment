@@ -88,7 +88,15 @@ services:
       - ./:/etc/hyperledger/channel/
     networks:
       - test
-
+    extra_hosts:   
+      - peer0.org1.example.com:18.237.217.153
+      - peer1.org1.example.com:18.237.217.153
+      - peer0.org3.example.com:34.215.196.120
+      - peer1.org3.example.com:34.215.196.120
+      - orderer.example.com:54.245.37.201
+      - orderer2.example.com:54.245.37.201
+      - orderer3.example.com:54.245.37.201
+      
   peer1.org2.example.com:
     container_name: peer1.org2.example.com
     extends:
@@ -130,3 +138,12 @@ services:
       - ./:/etc/hyperledger/channel/
     networks:
       - test
+    extra_hosts:   
+      - peer0.org1.example.com:18.237.217.153
+      - peer1.org1.example.com:18.237.217.153
+      - peer0.org3.example.com:34.215.196.120
+      - peer1.org3.example.com:34.215.196.120
+      - orderer.example.com:54.245.37.201
+      - orderer2.example.com:54.245.37.201
+      - orderer3.example.com:54.245.37.201
+  
